@@ -1,0 +1,16 @@
+<p>product-list works!</p>
+
+<section class="product-list">
+  @for(product of products; track product) {
+  <div class="product-cart">
+    <img [src]="product.image" alt="" height="250" />
+    <h2>{{ product.name }}</h2>
+    <h3>$ {{ product.price }}</h3>
+    <button class="btn btn-secondary" (click)="onSubmit(product.id)">View Product</button>
+  </div>
+  }
+</section>
+
+<footer>
+  <p>&copy; 2024 My E-commerce Store</p>
+</footer>
